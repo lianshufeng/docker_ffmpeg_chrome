@@ -13,7 +13,7 @@ ENV SCREEN_HEIGHT "768"
 USER root
 RUN apt-get update && apt-get install -y ffmpeg 
 
-RUN apt-get install -y fonts-dejavu*
+RUN apt-get install -y fonts-dejavu* unclutter
 
 #复制启动文件
 COPY entrypoint.sh /entrypoint.sh

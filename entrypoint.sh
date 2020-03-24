@@ -2,7 +2,13 @@
 
 /opt/bin/entry_point.sh &
 
-sleep 10
+
+#隐藏光标
+unclutter -display :99 -noevents -grab &
+
+
+#延迟推流
+sleep 5
 
 ffmpeg -f x11grab -video_size ${SCREEN_WIDTH}x${SCREEN_HEIGHT} \
  -i :99 -async 1 -vsync 1 \
