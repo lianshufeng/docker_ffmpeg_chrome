@@ -2,13 +2,12 @@
 
 /opt/bin/entry_point.sh &
 
-
-#隐藏光标
-nohup unclutter -display :99 -noevents -grab &
-
-
 #延迟推流
 sleep 5
+
+#隐藏光标
+source /etc/profile
+nohup unclutter -display :99 -noevents -grab &
 
 ffmpeg -f x11grab -video_size ${SCREEN_WIDTH}x${SCREEN_HEIGHT} \
  -i :99 -async 1 -vsync 1 \
