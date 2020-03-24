@@ -5,8 +5,8 @@ FROM selenium/standalone-chrome:3.141.59-europium
 #推流地址
 ENV STREAM_URL ""
 #分辨率
-ENV window_width 1366
-ENV window_height 768
+ENV window_width "1366"
+ENV window_height "768"
 
 
 USER root
