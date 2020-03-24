@@ -14,8 +14,11 @@ RUN apt-get update && apt-get install -y ffmpeg
 
 RUN apt-get install -y fonts-dejavu*
 
+#复制启动文件
 COPY entrypoint.sh /entrypoint.sh
+RUN chmod -R 777 /entrypoint.sh
 
+#切换用户
 USER seluser
 
 ENTRYPOINT ["/entrypoint.sh"]
