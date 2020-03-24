@@ -4,7 +4,7 @@
 
 
 #隐藏光标
-unclutter -display :99 -noevents -grab &
+nohup unclutter -display :99 -noevents -grab &
 
 
 #延迟推流
