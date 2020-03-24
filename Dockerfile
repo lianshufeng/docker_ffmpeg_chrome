@@ -1,5 +1,5 @@
 #基础镜像
-FROM selenium/standalone-chrome:3.141.59
+FROM selenium/standalone-chrome:3.141.59-europium
 
 
 #推流地址
