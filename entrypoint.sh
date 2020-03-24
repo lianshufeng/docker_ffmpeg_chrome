@@ -4,7 +4,7 @@
 
 sleep 10
 
-ffmpeg -f x11grab -video_size ${window_width}x${window_height} \
+ffmpeg -f x11grab -video_size ${SCREEN_WIDTH}x${SCREEN_HEIGHT} \
  -i :99 -async 1 -vsync 1 \
  -framerate 30 -vcodec libx264 -preset ultrafast -qp 0 -pix_fmt yuv444p \
  -vf "drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf: text='%{localtime\:%m/%d/%Y %I.%M.%S %p}': fontcolor=white@0.8: x=10: y=950" \
