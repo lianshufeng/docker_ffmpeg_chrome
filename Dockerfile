@@ -8,6 +8,7 @@ ENV STREAM_URL ""
 #分辨率
 ENV SCREEN_WIDTH "1366"
 ENV SCREEN_HEIGHT "768"
+ENV framerate "30"
 
 
 USER root
