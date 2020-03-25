@@ -14,7 +14,7 @@ ENV framerate "30"
 USER root
 RUN apt-get update && apt-get install -y ffmpeg 
 
-RUN apt-get install -y fonts-dejavu* unclutter
+RUN apt-get install -y fonts-dejavu* unclutter libpulse-dev
 
 #复制启动文件
 COPY entrypoint.sh /entrypoint.sh
