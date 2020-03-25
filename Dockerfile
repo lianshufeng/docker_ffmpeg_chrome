@@ -5,10 +5,16 @@ FROM selenium/standalone-chrome:3.141.59-europium
 #推流地址
 ENV STREAM_URL ""
 
+#帧率
+ENV FRAMERATE "30"
+
+#自定义
+ENV FFMPEG_CMD ""
+
 #分辨率
 ENV SCREEN_WIDTH "1366"
 ENV SCREEN_HEIGHT "768"
-ENV framerate "30"
+
 
 
 USER root
