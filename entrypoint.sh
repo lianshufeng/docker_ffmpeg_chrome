@@ -10,10 +10,12 @@ pulseaudio --start
 
 #隐藏光标
 source /etc/profile
-nohup unclutter -display :99 -noevents -grab &
+
+
+nohup unclutter -display $DISPLAY -noevents -grab &
 
 ffmpeg -f x11grab -video_size ${SCREEN_WIDTH}x${SCREEN_HEIGHT} \
- -i :99 -async 1 -vsync 1 \
+ -i $DISPLAY -async 1 -vsync 1 \
  -framerate ${framerate} -vcodec libx264 -preset ultrafast -qp 0 -pix_fmt yuv444p \
  -vf "drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf: text='%{localtime\:%m/%d/%Y %I.%M.%S %p}': fontcolor=white@0.8: x=10: y=950" \
  -tune zerolatency -b 900k -f flv $STREAM_URL
