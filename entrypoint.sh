@@ -5,6 +5,9 @@
 #延迟推流
 sleep 5
 
+#启动声卡
+pulseaudio --start
+
 #隐藏光标
 source /etc/profile
 nohup unclutter -display :99 -noevents -grab &
