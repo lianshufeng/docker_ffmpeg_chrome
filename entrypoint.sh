@@ -15,7 +15,7 @@ nohup unclutter -display $DISPLAY -noevents -grab &
 
 
 #### 集群配置
-if [ -z  $FFMPEG_CMD ]; then
+if [ -z  "$FFMPEG_CMD" ]; then
 	#默认的推送模板
 	FFMPEG_CMD="ffmpeg \
 	 -f pulse -i default \
