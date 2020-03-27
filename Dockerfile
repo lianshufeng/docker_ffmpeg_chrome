@@ -15,6 +15,15 @@ ENV FFMPEG_CMD ""
 ENV SCREEN_WIDTH "1366"
 ENV SCREEN_HEIGHT "768"
 
+#如果为空则与窗口分辨率一致
+ENV Output_WIDTH ""
+ENV Output_HEIGHT ""
+
+#码率
+ENV Vedio_Bitrate "2500k"
+ENV Audio_Bitrate "64k"
+
+
 
 
 USER root
