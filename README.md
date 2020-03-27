@@ -2,6 +2,11 @@
 
 
 
+#更新
+````shell
+docker pull registry.cn-chengdu.aliyuncs.com/1s/ffmpeg_chrome
+````
+
 
 #自定义推流地址
 ````shell
