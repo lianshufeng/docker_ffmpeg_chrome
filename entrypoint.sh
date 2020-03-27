@@ -14,16 +14,15 @@ nohup unclutter -display $DISPLAY -noevents -grab &
 
 
 # 输出分辨率率
-if [-z "$Output_WIDTH" ]; then
+if [ -z "$Output_WIDTH" ]; then
 	Output_WIDTH=$SCREEN_WIDTH
 fi
 
-if [-z "$Output_HEIGHT" ]; then
+if [ -z "$Output_HEIGHT" ]; then
 	Output_HEIGHT=$SCREEN_HEIGHT
 fi
 
-echo $Output_WIDTH
-echo $Output_HEIGHT
+
 
 #### 集群配置
 if [ -z  "$FFMPEG_CMD" ]; then
