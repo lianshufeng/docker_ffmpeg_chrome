@@ -2,18 +2,19 @@
 FROM selenium/standalone-chrome:3.141.59-europium
 
 
+#分辨率
+ENV SCREEN_WIDTH "1366"
+ENV SCREEN_HEIGHT "768"
+
+
+#自定义,该参数会覆盖所有ffmpeg的参数
+ENV FFMPEG_CMD ""
+
 #推流地址
 ENV STREAM_URL ""
 
 #帧率
 ENV FRAMERATE "30"
-
-#自定义
-ENV FFMPEG_CMD ""
-
-#分辨率
-ENV SCREEN_WIDTH "1366"
-ENV SCREEN_HEIGHT "768"
 
 #如果为空则与窗口分辨率一致
 ENV Output_WIDTH ""

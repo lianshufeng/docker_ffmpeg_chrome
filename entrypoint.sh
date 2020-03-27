@@ -22,7 +22,8 @@ if [-z "$Output_HEIGHT" ]; then
 	Output_HEIGHT=$SCREEN_HEIGHT
 fi
 
-
+echo $Output_WIDTH
+echo $Output_HEIGHT
 
 #### 集群配置
 if [ -z  "$FFMPEG_CMD" ]; then
