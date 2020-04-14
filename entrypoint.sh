@@ -3,14 +3,18 @@
 /opt/bin/entry_point.sh &
 
 #延迟推流,暂时不延迟
-sleep 5
+
 
 #启动声卡
 pulseaudio --start
 
 #隐藏光标
-source /etc/profile
-nohup unclutter -display $DISPLAY -noevents -grab &
+echo "#!/bin/bash" > /opt/sleep_run_unclutter.sh
+echo "source /etc/profile" >> /opt/sleep_run_unclutter.sh
+echo "sleep 5 ; nohup unclutter -display $DISPLAY -noevents -grab &" >> /opt/sleep_run_unclutter.sh 
+sh /opt/sleep_run_unclutter.sh &
+
+
 
 
 # 输出分辨率率
