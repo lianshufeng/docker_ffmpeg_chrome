@@ -1,5 +1,5 @@
 #基础镜像
-FROM selenium/standalone-chrome:4.0.0
+FROM selenium/standalone-chrome:3.141.59
 
 
 #分辨率
