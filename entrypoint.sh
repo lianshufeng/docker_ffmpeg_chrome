@@ -9,8 +9,8 @@
 pulseaudio --start
 
 #隐藏光标
-echo "#!/bin/bash" > /opt/sleep_run_unclutter.sh
-echo "source /etc/profile" >> /opt/sleep_run_unclutter.sh
+#echo "#!/bin/bash" > /opt/sleep_run_unclutter.sh
+echo "source /etc/profile" > /opt/sleep_run_unclutter.sh
 echo "sleep 5 ; nohup unclutter -display $DISPLAY -noevents -grab &" >> /opt/sleep_run_unclutter.sh 
 sh /opt/sleep_run_unclutter.sh &
 
