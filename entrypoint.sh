@@ -2,8 +2,8 @@
 
 /opt/bin/entry_point.sh &
 
-#延迟推流
-sleep 5
+#延迟推流,暂时不延迟
+#sleep 5
 
 #启动声卡
 pulseaudio --start
