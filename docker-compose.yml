@@ -9,19 +9,12 @@ services:
     image: lianshufeng/ffmpeg_chrome
     shm_size: 2gb
     ports:
-      - "4444:4444" # selenoid 
-      - "8080:8080"
+      - "4444:4444" # Selenium 
     container_name: ffmpeg
     environment:
       - SCREEN_WIDTH=1920
       - SCREEN_HEIGHT=1080
       - Output_WIDTH=640
       - Output_HEIGHT=360
-      - STREAM_URL=rtmp://rtmp.jpy.wang/live/test
-    # volumes:
-      # - /dev/shm:/dev/shm
+      - STREAM_URL=rtmp://localhost:1935/live/test
     restart: always
-    
-    
-# !!
-# curl -X POST http://127.0.0.1:4444/wd/hub/session/$s_id/url -d '{"url":"http://www.baidu.com"}'
