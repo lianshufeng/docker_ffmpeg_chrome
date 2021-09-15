@@ -24,10 +24,8 @@ if [ -z "$Output_HEIGHT" ]; then
 fi
 
 
-
-#### 集群配置
+#默认的推送模板
 if [ -z  "$FFMPEG_CMD" ]; then
-	#默认的推送模板
 	FFMPEG_CMD="ffmpeg \
 	 -f pulse -i default \
 	 -f x11grab -video_size ${SCREEN_WIDTH}x${SCREEN_HEIGHT} \

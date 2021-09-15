@@ -1,5 +1,5 @@
 #基础镜像
-FROM selenium/standalone-chrome:3.141.59
+FROM selenium/standalone-chrome:93.0
 
 
 #分辨率
@@ -36,7 +36,7 @@ RUN apt-get install -y fonts-dejavu* unclutter pulseaudio libpulse-dev
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod -R 777 /entrypoint.sh
 
-#生产隐藏鼠标的脚本
+#隐藏鼠标的脚本
 RUN echo "#!/bin/bash" > /opt/sleep_run_unclutter.sh
 RUN echo "sleep 5 ; nohup unclutter -display $DISPLAY -noevents -grab &" >> /opt/sleep_run_unclutter.sh 
 
