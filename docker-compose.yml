@@ -13,7 +13,6 @@ services:
     container_name: ffmpeg
     environment:
       - SE_NODE_SESSION_TIMEOUT=31536000 # 会话过期时间
-      - SE_NODE_OVERRIDE_MAX_SESSIONS=true # 覆盖会话
       - SCREEN_WIDTH=1920
       - SCREEN_HEIGHT=1080
       - Output_WIDTH=640
