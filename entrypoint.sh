@@ -29,11 +29,12 @@ if [ -z  "$FFMPEG_CMD" ]; then
 	FFMPEG_CMD="ffmpeg \
 	 -f pulse -i default \
 	 -f x11grab -video_size ${SCREEN_WIDTH}x${SCREEN_HEIGHT} \
-	 -i $DISPLAY -async 1 -vsync 1 -framerate ${FRAMERATE} -vcodec libx264 -preset ultrafast -pix_fmt yuv420p \
+	 -i $DISPLAY -async 1 -vsync 1 -framerate ${FRAMERATE} -preset ultrafast -pix_fmt yuv420p \
 	 -tune zerolatency -b 900k \
 	 -r ${FRAMERATE} -c:a aac -b:v ${Vedio_Bitrate} -b:a ${Audio_Bitrate} -s ${Output_WIDTH}x${Output_HEIGHT} \
 	 -f flv $STREAM_URL"
 fi
+
 
 
 echo $FFMPEG_CMD
